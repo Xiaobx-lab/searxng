@@ -2,8 +2,8 @@ name: Build and Push Custom SearXNG (Multi-Arch + Tag)
 
 on:
   push:
-    branches: [ master ]   # 你可以改成你自己的主分支
-  workflow_dispatch:        # 允许手动触发构建
+    branches: [ master ]
+  workflow_dispatch:
 
 jobs:
   build-and-push:
@@ -25,7 +25,7 @@ jobs:
       - name: Build and Push Multi-Arch Image with Tags
         uses: docker/build-push-action@v5
         with:
-          context: ./container
+          context: .  
           file: ./container/Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
