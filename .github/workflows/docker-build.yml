@@ -2,7 +2,7 @@ name: Build and Push Custom SearXNG (Multi-Arch + Tag)
 
 on:
   push:
-    branches: [ main ]   # 你可以改成你自己的主分支
+    branches: [ master ]   # 你可以改成你自己的主分支
   workflow_dispatch:        # 允许手动触发构建
 
 jobs:
